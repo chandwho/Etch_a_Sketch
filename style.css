@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: rgb(73, 73, 73);
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/*Using grid display for design*/
+
+.main-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav-tab container"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+}
+
+.header{
+    padding: 10px;
+    grid-area: header;
+}
+
+.header, .footer{
+    background-color: coral;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.nav-tab{
+    grid-area: nav-tab;
+    background-color: rgb(73, 73, 73);
+    border-right: solid 15px coral;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem; 
+
+}
+
+.nav-tab h2{
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+.nav-tab .nav-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-tab .button-container{
+    height: 60px;
+    width: 180px;
+}
+.button-container .button{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(73, 73, 73);
+    border: solid 5px coral;
+    color: #fff;  
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* To apply the body's font family */
+    font-family: inherit;
+}
+
+.button-container button:hover, .button:focus{
+    outline: rgb(73, 73, 73);;
+    transform: scale(1.2);
+    transition: .3s;
+    background-color: #fff;;
+    border: solid 5px coral;
+    color: rgb(73, 73, 73);
+}
+
+.container{
+    background-color: #fff;
+    height: 550px;
+    width: 550px;
+    margin: 20px auto;
+    grid-area: container;
+    display: grid;
+    
+    grid-template-columns: repeat(16, 1fr);
+    grid-auto-rows: repeat(16, 1fr);
+    
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #000 ;
+    background-color: bisque;
+}
+
+
+.footer{
+    grid-area: footer;
+}
+

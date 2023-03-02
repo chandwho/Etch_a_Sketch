@@ -74,6 +74,7 @@ body{
     font-weight: bold;
     /* To apply the body's font family */
     font-family: inherit;
+    box-shadow: 0 0 20px  #000;
 }
 
 .button-container button:hover, .button:focus{
